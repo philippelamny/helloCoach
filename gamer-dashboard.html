@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Coach - Paul</title>
+    <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
+    <script defer src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
+  </head>
+  <body>
+  <div class="card text-center">
+    <div class="card-header">
+      Paul Lam
+    </div>
+    <div class="card-body">
+      <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <canvas id="chartjs-radar"></canvas>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-body-secondary">
+      2 days ago
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      new Chart(document.getElementById("chartjs-radar"), {
+        type: "radar",
+        width: 20,
+        height: 20,
+        data: {
+          labels: ["Speed", "Reliability", "Comfort", "Safety", "Efficiency"],
+          datasets: [{
+            label: "Model X",
+            backgroundColor: "rgba(0, 123, 255, 0.2)",
+            borderColor: "red",
+            pointBackgroundColor: "orange",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "green",
+            data: [70, 53, 82, 60, 33]
+          }, {
+            label: "Model S",
+            backgroundColor: "rgba(220, 53, 69, 0.2)",
+            borderColor: "green",
+            pointBackgroundColor: "blue",
+            pointBorderColor: "#fff",
+            pointHoverBackgroundColor: "#fff",
+            pointHoverBorderColor: "red",
+            data: [35, 38, 65, 85, 84]
+          }]
+        }
+      });
+    });
+
+
+  </script>
+
+  </body>
+</html>
