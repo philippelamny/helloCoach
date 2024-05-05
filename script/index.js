@@ -1,5 +1,5 @@
 function getevents() {
-    fetch("./script/events.json")
+    fetch("../data/football/etapes-de-developpement.json")
         .then(function (response) {
             return response.json()
         })
